@@ -33,7 +33,7 @@ export class AppComponent {
 
     // console.log(this.desde);
     if(this.busqueda){
-      if(this.productos.length >= 12){
+      if(this.productos.length >= 12 || valor < 0){
         this.desde += valor;
         this.buscarProducto(this.terminoActual);
       }else{
