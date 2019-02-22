@@ -1,0 +1,303 @@
+<!-- Search Wrapper Area Start -->
+<div class="search-wrapper section-padding-100">
+    <div class="search-close">
+        <i class="fa fa-close" aria-hidden="true"></i>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="search-content">
+                    <form onSubmit="return false;">
+                        <input (keyup.enter)="buscarProducto(input.value)" #input type="search" name="search" id="search" placeholder="Buscar productos por nombre, categorías, descripción...">
+                        <button (click)="buscarProducto(input.value)" type="button"><img src="../assets/img/core-img/search.png"></button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search Wrapper Area End -->
+
+<!-- ##### Main Content Wrapper Start ##### -->
+<div id="inicio" class="main-content-wrapper d-flex clearfix">
+
+    <!-- Mobile Nav (max width 767px)-->
+    <div class="mobile-nav">
+        <!-- Navbar Brand -->
+        <div class="amado-navbar-brand">
+            <a href="index.html"><img src="../assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        <!-- Navbar Toggler -->
+        <div class="amado-navbar-toggler">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
+    <!-- Header Area Start -->
+    <header class="header-area clearfix">
+        <!-- Close Icon -->
+        <div class="nav-close">
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+        <!-- Logo -->
+        <div class="logo">
+            <a><img src="../assets/img/core-img/logo.png" alt=""></a>
+        </div>
+        <!-- Cart Menu -->
+        <div class="cart-fav-search">
+            <a class="search-nav"><img src="../assets/img/core-img/search.png">Buscar</a>
+
+        </div>
+
+        <br>
+        <!-- Amado Nav -->
+        <nav class="amado-nav">
+            <ul>
+                <li class="active"><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Social Button -->
+        <div class="social-info d-flex justify-content-between">
+            <a class="icons-social"><i class="fab fa-facebook"></i></a>
+            <a class="icons-social"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Product Catagories Area Start -->
+
+
+    <div class="products-catagories-area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <button (click)="cambiarDesde(-6)" class="icon-left btn btn-light">
+                        <a class="a-icon"><i class="fas fa-arrow-circle-left"></i></a>
+                    </button>
+                </div>
+                <div class="col-6">
+                    <button (click)="cambiarDesde(6)" class="icon-right btn btn-light">
+                        <a class="a-icon"><i class="fas fa-arrow-circle-right"></i></a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div *ngIf="productos != undefined && productos.length > 0" class="row amado-pro-catagory clearfix">
+
+
+            <!-- Single Catagory -->
+            <div *ngFor="let producto of productos" class="col-12 col-sm-12 col-md-6 col-lg-4 p-0 m-0 single-products-catagory contenedor-img clearfix">
+                <a>
+                    <img *ngIf="producto.imagen != undefined" class="img-product h-100" [src]="url_serv + '/' + producto.imagen">
+                    <img *ngIf="producto.imagen == undefined" class="img-product h-100" src="https://tiendatelas.com/9715-thickbox_default/tela-crepe-gris-perla.jpg">
+
+                    <!-- Hover Content -->
+                    <div class="hover-content">
+                        <div class="line"></div>
+                        <p class="pb-4 text-white">Categoría: {{ producto.categoria }}</p>
+                        <h2 class="text-white">{{ producto.nombre_comercial }}</h2>
+                        <h5 class="text-white">{{ producto.descripcion }}</h5>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- Product Catagories Area End -->
+</div>
+<!-- ##### Main Content Wrapper End ##### -->
+
+<!-- ##### Newsletter Area Start ##### -->
+<section id="servicios" class="newsletter-area section-padding-100-0">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Newsletter Text -->
+            <div class="col-12">
+                <div class="newsletter-text mb-100">
+                    <h2 class="text-center">Nuestros <span>Servicios: </span></h2>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="fh5co-feature animate-box pb-5" data-animate-effect="fadeInLeft">
+
+                                <div class="fh5co-text">
+                                    <h3 class="text-white">
+                                        <i class="fas fa-briefcase-medical"></i> Productos ortopédicos
+                                    </h3>
+                                    <p>
+                                        Conozca nuestra amplia gama de productos ortopédicos al mejor precio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="fh5co-feature animate-box pb-5" data-animate-effect="fadeInLeft">
+
+                                <div class="fh5co-text">
+                                    <h3 class="text-white">
+                                        <i class="fas fa-hospital-alt"></i> Venta de equipo médico y de rehabilitación
+                                    </h3>
+                                    <p>
+                                        Contamos una amplia variedad de artículos médicos especializados.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="fh5co-feature animate-box pb-5" data-animate-effect="fadeInLeft">
+
+                                <div class="fh5co-text">
+                                    <h3 class="text-white">
+                                        <i class="fas fa-shoe-prints"></i>Ortesis y prótesis
+                                    </h3>
+                                    <p>
+                                        Prótesis: Miembro inferior y superior.
+                                        <br> Orteis: Plantillas ortopédicas y tipo insert foot, férulas posteriores, virones, cuñas y más.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="fh5co-feature animate-box pb-5" data-animate-effect="fadeInLeft">
+
+                                <div class="fh5co-text">
+                                    <h3 class="text-white">
+                                        <i class="fas fa-clipboard-list"></i>Instrumental quirúrgico
+                                    </h3>
+                                    <p>
+                                        Tenemos amplia gama de instrumental q}quirúrgico.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Newsletter Area End ##### -->
+<div id="contacto" class="container pt-5 pb-4">
+    <!-- Contacto -->
+    <div class="row">
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <h5>
+                Sucursal: Villahermosa, Tabasco
+            </h5>
+            <p class="text-black">
+                Dirección: Calle Regino Hernández Llergo 203, Nueva Villahermosa, 86070 Villahermosa, Tab.
+                <br> Teléfono: 01 993 312 7455
+                <br> Horarios: Lunes a Viernes: 8am-6pm y Sábado: 8am-4pm
+
+            </p>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15178.77939026482!2d-92.9306859!3d17.9929287!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcb5a6c8aa82d06ba!2sOrtopedia+2001!5e0!3m2!1ses-419!2smx!4v1548530182977" width="100%" height="370"
+                        frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6">
+                    <img src="../assets/img/local-centro.jpeg" class="img-responsive">
+                </div>
+
+            </div>
+
+
+        </div>
+        <hr>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 pt-5">
+            <h5>
+                Sucursal: Palenque, Chiapas
+            </h5>
+            <p class="text-black">
+                Dirección: Av. Benito Juárez N.123, Palenque Chiapas, CP: 29960
+                <br> Teléfono: 9163453664
+                <br> Horarios: Lunes a Viernes: 8am-9pm y Sábados: 8am-10am
+            </p>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d237.81175691023918!2d-91.98886111778846!3d17.508080984527734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d17.5081395!2d-91.988843!4m3!3m2!1d17.5081369!2d-91.9888423!5e0!3m2!1ses-419!2smx!4v1550866420959"
+                        width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6">
+                    <img src="../assets/img/local-palenque.jpeg" class="img-responsive">
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer_area clearfix">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Single Widget Area -->
+            <div class="col-12 col-lg-4">
+                <div class="single_widget_area">
+                    <!-- Logo -->
+                    <div class="footer-logo mr-50">
+                        <a href="index.html"><img src="../assets/img/core-img/logo.png" alt=""></a>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <p class="copywrite">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> Todos los derechos reservados
+                        <br> Hecho por: <a>KrustyLab</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+            <!-- Single Widget Area -->
+            <div class="col-12 col-lg-8">
+                <div class="single_widget_area">
+                    <!-- Footer Menu -->
+                    <div class="footer_menu">
+                        <nav class="navbar navbar-expand-lg justify-content-end">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+                            <div class="collapse navbar-collapse" id="footerNavContent">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6">
+                                        <p class="text-white">
+                                            Sucursal: Villahermosa, Tabasco
+                                        </p>
+                                        <p class="text-black">
+                                            Dirección: Calle Regino Hernández Llergo 203, Nueva Villahermosa, 86070 Villahermosa, Tab.
+                                            <br> Teléfono: 01 993 312 7455
+
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6">
+                                        <p class="text-white">
+                                            Sucursal: Palenque, Chiapas
+                                        </p>
+                                        <p class="text-black">
+                                            Dirección: Calle 31 92 ACP/Loc.:24100 Ciudad del Carmen Entidad Federativa: Campeche
+                                            <br> Teléfono: 99 31 89 67 22
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

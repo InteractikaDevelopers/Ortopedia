@@ -1,0 +1,434 @@
+<!-- HEADER -->
+<header id="inicio">
+    <!-- /TOP HEADER -->
+    <ul class="header-links pull-left w-100 px-4 py-1" style="background-color: #1E1F29 !important;">
+        <li><a class="text-white"><i class="fa fa-phone"></i> (993) 3-14-00-82  o  <i class="fa fa-phone"></i>(993) 3-12-98-49</a></li>
+        <li><a class="text-white"><i class="fa fa-envelope-o"></i> contacto@ortopediadelsureste.store</a></li>
+    </ul>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark w-100 pb-3" style="background-color: #1E1F29 !important;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-2">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#catalogo">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+
+            </ul>
+            <form onSubmit="return false;" class="form-inline form-header mr-5">
+                <input (keyup.enter)="buscarProducto(input.value)" #input type="text" class="input form-control" placeholder="Buscar producto">
+                <button (click)="buscarProducto(input.value)" type="button" class="btn btn-danger search-btn">Buscar</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <!-- /MAIN HEADER -->
+</header>
+<div id="home"></div>
+<!-- /HEADER -->
+<!-- <div class="row logorow">
+    <a href="#">
+         <img class="logo" src="../assets/img/FINALES-02.png"> 
+    </a>
+</div> -->
+
+
+<!-- SECTION -->
+<div class="section pb-0 p-header">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- servicio -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img class="img-item" src="https://www.medicalcenter.com.mx/content/images/thumbs/0000490_415.jpg" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>Productos ortopédicos<br>de calidad</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /servicio -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop-img-logo">
+                    <img class="img-logo" src="../assets/img/FINALES-02.png">
+                </div>
+            </div>
+
+            <!-- servicio -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img class="img-item" src="https://media.ottobock.com/orthotics/genu-arexa-50k18/images/genu_arexa_solution_1_1_teaser_onecolumn_border.jpg">
+                    </div>
+                    <div class="shop-body">
+                        <h3>Elaboración de órtesis y prótesis</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- /servicio -->
+
+        </div>
+        <div class="row">
+            <!-- <div class="col-md-2 col-xs-6"></div> -->
+            <!-- servicio -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img class="img-item" src="https://clinicamartingomez.es/wp-content/uploads/22-Sist-placas-osteosi-para-tob-Acumed.jpg">
+                    </div>
+                    <div class="shop-body">
+                        <h3>Material de osteosíntesis e implantes <small class="text-white">(Traumatología)</small> </h3>
+                    </div>
+                </div>
+            </div>
+            <!-- /servicio -->
+            <!-- servicio -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img class="img-item" src="http://www.deyre.com/deyre2015/wp-content/uploads/45646546545-14-1024x683.jpg?x63460" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>Artículos<br>Médicos</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- /servicio -->
+            <!-- servicio -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img class="img-item" src="https://www.canaldiabetes.com/wp-content/uploads/2014/09/PAciente-con-diabetes-537x350.jpg">
+                    </div>
+                    <div class="shop-body">
+                        <h3><br>Consultas especializadas <small class="text-white">(Traumatología)</small></h3>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-2 col-xs-6"></div> -->
+
+            <!-- /servicio -->
+
+
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+
+<!-- BANNER SECTION -->
+<!-- <div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="m-auto banner" src="../assets/img/doctor-563428_960_720.png">
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- /BANNER SECTION -->
+
+<!-- SECTION -->
+<div id="productosContainer" class="section pt-0">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <!-- section title -->
+            <div id="catalogo" class="col-md-12">
+                <div class="section-title">
+                    <h3 class="title">Catálogo</h3>
+                    <div class="section-nav">
+                        <div class="form-group">
+                            <select (change)="buscarProducto(select.value)" #select class="form-control">
+                                <option disabled>Elegir categoría:</option>
+                                <option value="Categoria" selected>Todas</option>
+                                <option>Tórax</option>
+                                <option>Miembro Superior</option>
+                                <option>Miembro inferior</option>
+                                <option>Andaderas</option>
+                                <option>Bastones y muletas</option>
+                                <option>Camas hospitalarias</option>
+                                <option>Comodos y baño</option>
+                                <option>Mesas</option>
+                                <option>Sillas</option>
+                                <option>Accesorios</option>
+                                <option>Otros</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /section title -->
+
+            <!-- Products tab & slick -->
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3" *ngFor="let item of productos">
+                        <!-- product -->
+                        <div class="product">
+                            <div>
+                                <div class="product-img">
+                                    <img class="item-product" [src]="url_serv + '/' + item.imagen">
+                                    <div class="product-label">
+                                        <span class="new">Categoria: {{ item.categoria }}</span>
+                                    </div>
+                                </div>
+                                <div class="product-body">
+                                    <h3 class="product-name">
+                                        <a href="#">
+                                                {{ item.nombre_comercial }}
+                                            </a>
+                                    </h3>
+                                    <p>
+                                        {{ item.descripcion }}
+                                    </p>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button href="#contactModal" role="button" data-toggle="modal" class="add-to-cart-btn">Contactar sucursal</button>
+                                </div>
+                            </div>
+                            <!-- /product -->
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="contenedor-btns">
+                    <button class="btn arrows btn-secondary" (click)="cambiarDesde(12)">
+                        <a><i class="fa fa-arrow-right"></i></a>
+                    </button>
+                    <button class="btn arrows btn-secondary" (click)="cambiarDesde(-12)">
+                        <a><i class="fa fa-arrow-left"></i></a>
+                    </button>
+                </div>
+            </div>
+            <!-- /Products tab & slick -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+<!-- MODAL CONTACTO -->
+<!-- Modal HTML -->
+<div id="contactModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Contactar Sucursal</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>
+                            Sucursal: Villahermosa, Tabasco
+                        </h5>
+                        <p class="text-black">
+                            Dirección: Venustiano Carraza 301, Centro Delegación Cuatro, 86077 Villahermosa, Tab.
+                            <br><br> Teléfono: (993) 3-14-00-82 o (993) 3-12-98-49
+                            <br><br> Horarios: Lunes a Viernes: 8am-7:30pm y Sábado: 8am-4pm
+
+                        </p>
+                    </div>
+
+                    <div class="col-md-12">
+                        <br><br>
+                        <h5>
+                            Sucursal: Ciudad del Carmen
+                        </h5>
+                        <p class="text-black">
+                            Dirección: Calle 31 92 ACP/Loc.:24100 Ciudad del Carmen Entidad Federativa: Campeche
+                            <br><br> Teléfono: (938) 3-82-84-21
+                            <br><br> Horarios: Lunes a Viernes: 8am-8pm y Sábado: 8am-3pm
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MODAL -->
+
+<!-- SECTION -->
+<div id="contacto" class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- CONTACTO -->
+        <h3 class="title">Contacto:</h3>
+
+
+        <div class="row">
+            <div class="col-12">
+                <h5>
+                    Sucursal: Villahermosa, Tabasco
+                </h5>
+                <p class="text-black">
+                    Dirección: Venustiano Carraza 301, Centro Delegación Cuatro, 86077 Villahermosa, Tab.
+                    <br> Teléfono: (993) 3-14-00-82 o (993) 3-12-98-49
+                    <br> Horarios: Lunes a Viernes: 8am-7:30pm y Sábado: 8am-4pm
+
+                </p>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30357.68897343471!2d-92.94859892439017!3d17.992172113993103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edd83875a5976f%3A0x1ecf15d9588b862c!2sORTOPEDI+DEL+SURESTE!5e0!3m2!1ses-419!2smx!4v1546965272538"
+                            width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <img src="../assets/img/suresteVillahermosa.png" class="img-responsive">
+                    </div>
+
+                </div>
+
+
+            </div>
+            <hr>
+            <div class="col-12">
+                <h5>
+                    Sucursal: Ciudad del Carmen
+                </h5>
+                <p class="text-black">
+                    Dirección: Calle 31 92 ACP/Loc.:24100 Ciudad del Carmen Entidad Federativa:Campeche
+                    <br> Teléfono: (938) 3-82-84-21
+                    <br> Horarios: Lunes a Viernes: 8am-8pm y Sábado: 8am-3pm
+                </p>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.134279857597!2d-91.8289624!3d18.6400377!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x796065cd539e718d!2sOrtopedia+del+Sureste!5e0!3m2!1ses!2smx!4v1546964744640" width="100%" height="400"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <img src="../assets/img/delsurest-ciudaddelcarmen.png" class="img-responsive">
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+<!-- NEWSLETTER -->
+<div id="newsletter" class="section">
+    <!-- container -->
+    <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="newsletter">
+                    <p>Siguenos en nuestras <strong>redes sociales</strong></p>
+
+                    <ul class="newsletter-follow border-0">
+                        <li>
+                            <a class="icons-redes border-0" href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a class="icons-redes border-0" href="#"><i class="fa fa-whatsapp"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /NEWSLETTER -->
+
+<!-- FOOTER -->
+<footer id="footer">
+    <!-- top footer -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Sucursal Villahermosa</h3>
+                        <p>
+                            Ortopedia del Sureste Villahermosa
+                        </p>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa fa-map-marker"></i>Dirección: Venustiano Carraza 301, Centro Delegación Cuatro, 86077 Villahermosa, Tab.</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i>Teléfono: 993 314 0082</a></li>
+                            <li><a href="#"><i class="fa fa-envelope-o"></i>contacto@ortopediadelsureste.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="clearfix visible-xs"></div>
+
+                <div class="col-md-6 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Sucursal Ciudad del Carmen</h3>
+                        <p>
+                            Ortopedia del Sureste Villahermosa
+                        </p>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa fa-map-marker"></i>Dirección:Calle 31 92 ACP/Loc.:24100 Ciudad del Carmen Entidad federativa: Campeche.								</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i>Teléfono: 938 382 8421</a></li>
+                            <li><a href="#"><i class="fa fa-envelope-o"></i>contacto@ortopediadelsureste.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /top footer -->
+
+    <!-- bottom footer -->
+    <div id="bottom-footer" class="section">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <span class="copyright">
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      Copyright &copy;
+                      <script>
+                          document.write(new Date().getFullYear());
+                      </script> Todos los derechos reservados. <br> Hecho por <a href="" target="_blank">KrustyLab</a>
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </span>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /bottom footer -->
+</footer>
+<!-- /FOOTER -->

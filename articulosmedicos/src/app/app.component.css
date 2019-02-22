@@ -1,0 +1,45 @@
+#fh5co-main .fh5co-narrow-content {
+    padding: 1.5em 0;
+}
+
+.fh5co-heading {
+    font-size: 30px;
+    margin-bottom: 3rem !important;
+}
+
+.iconos-sociales {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.krustyby {
+    font-size: 14px;
+    color: rgb(57, 118, 175);
+    font-weight: bold;
+    text-align: center !important;
+    padding-top: 3rem !important;
+}
+
+.containerPaginado {
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.paginado {
+    margin: auto;
+    display: 100%;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .fh5co-heading {
+        font-size: 25px !important;
+        margin-top: 5rem !important;
+        margin-bottom: 1em !important;
+    }
+}

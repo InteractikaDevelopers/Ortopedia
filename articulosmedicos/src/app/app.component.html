@@ -1,0 +1,205 @@
+<div id="inicio"></div>
+<div id="fh5co-page">
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+    <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+
+        <h1 id="fh5co-logo">
+            <a href="#"><img src="../assets/img/FINALES-01.jpg" class="logo"></a>
+        </h1>
+        <nav id="fh5co-main-menu" role="navigation">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="fh5co-footer">
+            <p><small>&copy; 2019 Ortopedia y artículos médicos.</small></p>
+            <ul>
+                <li><a class="iconos-sociales"><i class="icon-facebook"></i></a></li>
+                <li><a class="iconos-sociales"><i class="icon-whatsapp"></i></a></li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <div id="fh5co-main">
+        <!-- CATALOGO -->
+
+        <div class="fh5co-narrow-content">
+            <h2 class="fh5co-heading animate-box titulo" data-animate-effect="fadeInLeft">
+                TODO EN ORTOPEDIA Y ARTÍCULOS MÉDICOS
+            </h2>
+
+            <img src="../assets/img/ORTOPEDIA_COVER.jpg" class="img-responsive w-100">
+
+            <hr>
+
+            <h2>
+                <small>Nuestro catálogo: </small>
+            </h2>
+            <div id="catalogo" class="row">
+                <form onSubmit="return false;">
+                    <div class="col-12 col-sm-12 col-md-8">
+                        <div class="form-group">
+                            <input #input (keyup)="buscarProducto(input.value)" type="text" class="form-control" placeholder="Buscar un producto...">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-4">
+                        <div class="form-group">
+                            <select #select (change)="buscarProducto(select.value)" class="form-control">
+                                <option value="Categoria">Todas las categorias</option>
+                                <option>Cabeza y Cuello</option>
+                                <option>Tórax</option>
+                                <option>Miembro Superior</option>
+                                <option>Miembro Inferior</option>
+                                <option>Material de Curación</option>
+                                <option>Equipo Médico y de Rehabilitación</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div *ngIf="productos != undefined" class="row animate-box" data-animate-effect="fadeInLeft">
+                <div *ngFor="let producto of productos" class="col-12 col-sm-12 col-md-4 col-lg-3 work-item">
+                    <a href="work.html">
+                        <img [src]="url_serv + '/' + producto.imagen" class="img-responsive item">
+                        <h3 class="fh5co-work-title">{{ producto.nombre_comercial}}</h3>
+                        <p>
+                            {{ producto.descripcion }}
+                        </p>
+                    </a>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <hr>
+                <div class="containerPaginado">
+                    <button (click)="cambiarDesde(-8)" class="btn btn-dark paginado">Anterior</button>
+                    <button (click)="cambiarDesde(8)" class="btn btn-dark paginado">Siguiente</button>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- SERVICIOS -->
+
+        <div id="servicios" class="fh5co-narrow-content">
+            <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Nuestros servicios:</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="fas fa-briefcase-medical"></i> </div>
+                        <div class="fh5co-text">
+                            <h3>Productos y Zapatos ortopédicos</h3>
+                            <p>
+                                Conozca nuestra amplia gama de productos ortopédicos al mejor precio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Fabricación de aparatos ortopédicos y protésicos</h3>
+                            <p>
+                                Contamos con un excelente servicio elaboración de aparatos ortopédicos y protésicos de calidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fh5co-icon">
+                            <i class="fas fa-hospital-alt"></i>
+                        </div>
+                        <div class="fh5co-text">
+                            <h3>Artículos médicos y material de curación</h3>
+                            <p>
+                                Contamos una amplia variedad de artículos médicos especializados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- CONTACTO -->
+        <div id="contacto" class="fh5co-narrow-content">
+            <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">
+                Contacto:
+            </h2>
+
+            <div class="row">
+                <div class="col-12">
+                    <p class="font-weigth-bold">
+                        Sucursal: Villahermosa, Tabasco
+                    </p>
+                    <p class="text-black">
+                        Dirección: Venustiano Carranza 234, Centro, CP: 86000 Villahermosa, Tab.
+                        <br> Teléfono: 01 993 312 8251
+                        <br> Horarios: Lunes a Viernes: 8am-7:30pm y Sábado: 8am-4pm
+
+                    </p>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15178.718962196757!2d-92.917183!3d17.993631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8be832e0158f9545!2sOrtopedia+y+Art%C3%ADculos+M%C3%A9dicos!5e0!3m2!1ses-419!2smx!4v1546893233685" width="100%"
+                                height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <img src="../assets/img/ortopediaVillahermosa.png" class="img-responsive">
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <hr>
+                <div class="col-12">
+                    <p class="font-weigth-bold">
+                        Sucursal: Cárdenas, Tabasco
+                    </p>
+                    <p class="text-black">
+                        Dirección: Ramón López Velarde N.302 CP: 86500
+                        <br> Teléfono: 9373225985
+                        <br> Horarios: Lunes a Viernes: 8am-7:30pm y Sábado: 8am-4pm
+                    </p>
+                    <div class="row">
+
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.7319991597797!2d-93.37436728281149!3d17.9912014716887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ec20f470678161%3A0x50aa096fc786dcc0!2sRam%C3%B3n+L%C3%B3pez+Velarde+302%2C+Centro%2C+86500+Heroica+C%C3%A1rdenas%2C+Tab.!5e0!3m2!1ses!2smx!4v1550677982692"
+                                width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="mt-4 col-12 col-sm-12 col-md-6">
+                            <img src="../assets/img/articulos-cardenas.jpeg" class="img-responsive">
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-12">
+                    <p class="krustyby">
+                        2019 - Created by <a href="">KrustyLab</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
