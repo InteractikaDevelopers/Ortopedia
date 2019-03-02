@@ -14,6 +14,8 @@ export class AppComponent {
   desde: number = 0;
   totalProductos: number = 0;
   url_serv: string;  
+  busqueda: boolean = false;
+  terminoActual:string = '';
   
   constructor(public productosS: ProductosService){
   
@@ -24,7 +26,7 @@ export class AppComponent {
 
   cambiarDesde(valor: number){
     let desde = this.desde + valor;
-    if(desde>= this.totalProductos){
+    if(desde >= this.totalProductos){
       return;
     }
 
@@ -32,19 +34,28 @@ export class AppComponent {
       return;
     }
     
-    this.desde += valor;
 
     // console.log(this.desde);
-
-    this.cargarProductos();
+    if(this.busqueda){
+      if(this.productos.length >= 8 || valor < 0){
+        this.desde += valor;
+        this.buscarProducto(this.terminoActual);
+      }else{
+        return;
+      }
+      
+    }else{
+      this.desde += valor;
+      this.cargarProductos();
+    }
 
   }
 
   cargarProductos(){
-
+    this.busqueda = false;
     this.productosS.obtenerProductos(this.desde).subscribe( (res: any)=>{
 
-      // console.log(res);
+      console.log(res);
 
       if(res.error){
         console.log("Ocurrio un error");
@@ -58,26 +69,28 @@ export class AppComponent {
   }
 
   buscarProducto(termino: string){
+    this.busqueda = true;
+    this.terminoActual = termino;
 
-    // console.log(termino);
-    // this.desde = 0;
-
-    if(termino === 'Categoria'){
+    if(this.terminoActual === 'Categoria'){
+      this.busqueda = false;
       this.desde = 0;
       this.cargarProductos();
+      document.getElementById('catalogo').scrollIntoView();
       return;
     }else{
-      this.productosS.buscarProducto(termino, this.desde).subscribe( (res: any)=>{
+      this.productosS.buscarProducto(this.terminoActual, this.desde).subscribe( (res: any)=>{
+        console.log(res);
+        
         if(res.error){
           console.log("Ocurrio un error");
         }else{
+          document.getElementById('catalogo').scrollIntoView();
           this.productos = res.productos;
           this.totalProductos = res.total;
         }
       });
     }
-
-    
     
   }
 }

@@ -62,7 +62,7 @@
 
         <!-- Social Button -->
         <div class="social-info d-flex justify-content-between">
-            <a class="icons-social"><i class="fab fa-facebook"></i></a>
+            <a target="_blank" href="https://www.facebook.com/Ortopedia-2001-471668193363834/" class="icons-social"><i class="fab fa-facebook"></i></a>
             <a class="icons-social"><i class="fab fa-whatsapp"></i></a>
         </div>
     </header>
@@ -71,9 +71,9 @@
     <!-- Product Catagories Area Start -->
 
 
-    <div class="products-catagories-area clearfix">
-        <div class="container">
-            <div class="row">
+    <div id="productos" class="products-catagories-area clearfix">
+        <div class="container py-3">
+            <div class="row justify-content-center">
                 <div class="col-6">
                     <button (click)="cambiarDesde(-6)" class="icon-left btn btn-light">
                         <a class="a-icon"><i class="fas fa-arrow-circle-left"></i></a>
@@ -84,31 +84,39 @@
                         <a class="a-icon"><i class="fas fa-arrow-circle-right"></i></a>
                     </button>
                 </div>
+                <div class="col-8 col-sm-8 col-md-6 col-lg-6">
+                    <form onSubmit="return false;">
+                        <div class="form-group">
+                            <select #select (change)="buscarProducto(select.value)" class="form-control w-100">
+                                <option value="Categoria">Todas las categorias</option>
+                                <option>Cabeza y Cuello</option>
+                                <option>Tórax</option>
+                                <option>Miembro Superior</option>
+                                <option>Miembro Inferior</option>
+                                <option>Material de Curación</option>
+                                <option>Equipo Médico y de Rehabilitación</option>
+                            </select>
+                        </div>
+                    </form>
 
+                </div>
             </div>
+
         </div>
+        <div *ngIf="productos != undefined && productos.length > 0">
+            <div class="card-columns">
 
-
-        <div *ngIf="productos != undefined && productos.length > 0" class="row amado-pro-catagory clearfix">
-
-
-            <!-- Single Catagory -->
-            <div *ngFor="let producto of productos" class="col-12 col-sm-12 col-md-6 col-lg-4 p-0 m-0 single-products-catagory contenedor-img clearfix">
-                <a>
-                    <img *ngIf="producto.imagen != undefined" class="img-product h-100" [src]="url_serv + '/' + producto.imagen">
-                    <img *ngIf="producto.imagen == undefined" class="img-product h-100" src="https://tiendatelas.com/9715-thickbox_default/tela-crepe-gris-perla.jpg">
-
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p class="pb-4 text-white">Categoría: {{ producto.categoria }}</p>
-                        <h2 class="text-white">{{ producto.nombre_comercial }}</h2>
-                        <h5 class="text-white">{{ producto.descripcion }}</h5>
+                <div class="card" *ngFor="let producto of productos">
+                    <img class="card-img-top" [src]="url_serv + '/' + producto.imagen" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-titulo">{{ producto.nombre_comercial }}</h5>
+                        <p class="card-text text-descripcion">{{ producto.descripcion | uppercase }}</p>
+                        <p class="card-text text-categoria"> {{ producto.categoria }}</p>
                     </div>
-                </a>
+                </div>
             </div>
-
         </div>
+
     </div>
     <!-- Product Catagories Area End -->
 </div>
@@ -129,7 +137,7 @@
 
                                 <div class="fh5co-text">
                                     <h3 class="text-white">
-                                        <i class="fas fa-briefcase-medical"></i> Productos ortopédicos
+                                        <i class="fas fa-briefcase-medical mr-2"></i> Productos ortopédicos
                                     </h3>
                                     <p>
                                         Conozca nuestra amplia gama de productos ortopédicos al mejor precio.
@@ -142,7 +150,7 @@
 
                                 <div class="fh5co-text">
                                     <h3 class="text-white">
-                                        <i class="fas fa-hospital-alt"></i> Venta de equipo médico y de rehabilitación
+                                        <i class="fas fa-hospital-alt mr-2"></i> Venta de equipo médico y de rehabilitación
                                     </h3>
                                     <p>
                                         Contamos una amplia variedad de artículos médicos especializados.
@@ -155,7 +163,7 @@
 
                                 <div class="fh5co-text">
                                     <h3 class="text-white">
-                                        <i class="fas fa-shoe-prints"></i>Ortesis y prótesis
+                                        <i class="fas fa-shoe-prints mr-2"></i>Ortesis y prótesis
                                     </h3>
                                     <p>
                                         Prótesis: Miembro inferior y superior.
@@ -169,7 +177,7 @@
 
                                 <div class="fh5co-text">
                                     <h3 class="text-white">
-                                        <i class="fas fa-clipboard-list"></i>Instrumental quirúrgico
+                                        <i class="fas fa-clipboard-list mr-2"></i>Instrumental quirúrgico
                                     </h3>
                                     <p>
                                         Tenemos amplia gama de instrumental q}quirúrgico.

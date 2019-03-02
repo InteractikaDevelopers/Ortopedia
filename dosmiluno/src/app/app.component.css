@@ -2,6 +2,27 @@
     font-size: 50px !important;
 }
 
+.imagenes {
+    width: 100%;
+}
+
+.contenedor-productos {
+    height: 480px;
+}
+
+.text-categoria {
+    font-size: 12px;
+    color: #4242e2 !important;
+}
+
+.text-descripcion {
+    font-size: 12px;
+}
+
+.text-titulo {
+    font-size: 16px;
+}
+
 .social-info {
     width: 50% !important;
 }
@@ -30,9 +51,43 @@
 .icon-left {
     display: block;
     margin: auto;
+    position: absolute;
+    left: 0;
 }
 
 .icon-right {
     display: block;
     margin: auto;
+    position: absolute;
+    right: 0;
+}
+
+.card-columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+    .card-columns {
+        -webkit-column-count: 1 !important;
+        -moz-column-count: 1 !important;
+        column-count: 1 !important;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .card-columns {
+        -webkit-column-count: 2 !important;
+        -moz-column-count: 2 !important;
+        column-count: 2 !important;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
 }
